@@ -1,35 +1,52 @@
-import React, {useState} from "react";
+import React, {useRef} from "react";
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [subject, setSubject] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
+  // const handleName = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const handleSubject = (e) => {
-    setSubject(e.target.value);
-  };
+  // const handleSubject = (e) => {
+  //   setSubject(e.target.value);
+  // };
 
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
+  // const handleMessage = (e) => {
+  //   setMessage(e.target.value);
+  // };
 
-  const sendEmail = async (e) => {
+  // const sendEmail = async (e) => {
+  //   e.preventDefault();
+  //   // send email functionality
+  //     setName("");
+  //     setEmail("");
+  //     setSubject("");
+  //     setMessage("");
+  //   };
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    // send email functionality
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    };
+
+    emailjs.sendForm('service_r9sxzjd', 'template_r2as221', form.current, 'nMnrLLdsoNIyQquxC')
+      .then((result) => {
+          console.log(result.text);
+          console.log("Message Sent Successfully!")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
+
 
   return (
     <div>
@@ -40,7 +57,17 @@ const Contact = () => {
         timely fashion.
       </h2>
       <br />
-      <form onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
+
+      {/* <form onSubmit={sendEmail}>
       <input
           placeholder="Name"
           value={name}
@@ -70,7 +97,7 @@ const Contact = () => {
         ></input>
         <hr />
         <button>Submit</button>
-      </form>
+      </form> */}
 
       {/* contact form
         requires name, email, subject, and message fields
