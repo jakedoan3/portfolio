@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Portfolio from "./Portfolio";
 import Footer from "./Footer";
+import "./Style/App.css"
 
 function App() {
   return (

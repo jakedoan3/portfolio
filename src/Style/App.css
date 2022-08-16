@@ -1,0 +1,29 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 15px;
+    background: rgb(205, 78, 0);
+    top: 0;
+  }
+  
+  .NavLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: right;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  
+  .NavTitle {
+    font-size: larger;
+    align-self: center;
+  }
+
+header {
+    
+}
