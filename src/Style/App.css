@@ -40,6 +40,13 @@ padding-top: 15px;
 /* text-align: center; */
 }
 
+.homeLinks {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    padding: 3px;
+}
+
   
 .NavTitle {
 font-size: 24px;

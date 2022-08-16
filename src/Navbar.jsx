@@ -17,12 +17,7 @@ const Navbar = () => {
       key: "Contact",
       route: "/contact",
       placeholder: "Contact",
-    },
-    {
-      key: "Music",
-      route: "/music",
-      placeholder: "Music",
-    },
+    }
   ];
 
   return (
