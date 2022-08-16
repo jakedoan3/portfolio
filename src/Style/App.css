@@ -1,29 +1,66 @@
+a {
+    background-color: rgb(60, 148, 231);
+    color: white;
+    padding: 2px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 10%;
+    
+}
+
+a:hover {
+    background-color: goldenrod;
+    box-shadow: 2px 2px 2px rgb(60, 148, 231);
+}
+
+a:active{
+    background-color: rgb(0, 84, 162);
+    color:black;
+    box-shadow: 2px 2px 2px rgb(206, 225, 243);
+}
+
 .Navbar {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    font-weight: bold;
+    padding: 15px;
+    background: rgb(49, 97, 159);
+    top: 0;
+}
+  
+.NavLink {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: left; 
+font-weight: bold;
+font-size: 20px;
+padding-top: 15px;
+/* text-align: center; */
+}
+
+  
+.NavTitle {
+font-size: 24px;
+align-self: center;
+}
+
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-weight: bold;
     padding: 15px;
-    background: rgb(205, 78, 0);
-    top: 0;
-  }
-  
-  .NavLink {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: right;
-    font-weight: bold;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  
-  .NavTitle {
-    font-size: larger;
-    align-self: center;
-  }
+    background: rgb(49, 97, 159);
+    position: sticky;
+    top: 100%;
+}
 
-header {
-    
+html {
+    background-color: rgb(101, 183, 255);
+}
+
+.project {
+
 }
